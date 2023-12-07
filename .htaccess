@@ -1,0 +1,21 @@
+RewriteEngine On
+RewriteBase /SIMI/SIMI/
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^home/?$ navbar.php?page=$1 [L]
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^mahasiswa/?$ views/mahasiswa/navbar.php?page=$1 [L]
+RewriteRule ^tambahMahasiswa/?$ views/mahasiswa/tambah.php
+RewriteRule ^cetakMahasiswa/?$ views/mahasiswa/cetak_mahasiswa.php
+RewriteRule ^proses_tambahMahasiswa/?$ views/mahasiswa/proses_tambah.php
+RewriteRule ^editMahasiswa/?$ views/mahasiswa/edit.php
+RewriteRule ^hapusMahasiswa/?$ views/mahasiswa/hapus.php
+
+RewriteRule ^dosen/?$ views/dosen/navbar.php?page=$1 [L]
+RewriteRule ^tambahDosen/?$ views/dosen/tambah.php
+RewriteRule ^proses_tambahDosen/?$ views/dosen/proses_tambah.php
+RewriteRule ^editDosen/?$ views/dosen/edit.php
+RewriteRule ^hapusDosen/?$ views/dosen/hapus.php
